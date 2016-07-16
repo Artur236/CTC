@@ -1,10 +1,10 @@
 $(function(){
 	$(window).scroll(function() {
 		if ($(window).scrollTop() > 400) {
-			$('.nav_bar').addClass('navbar-fixed-top');
+			$('.header .nav_bar').addClass('navbar-fixed-top');
 		}
 		else {
-			$('.nav_bar').removeClass('navbar-fixed-top');
+			$('.header .nav_bar').removeClass('navbar-fixed-top');
 		}
 	});
 
