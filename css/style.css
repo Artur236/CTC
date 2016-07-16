@@ -1,5 +1,3 @@
-/* font-family: 'Ubuntu', sans-serif;
-font-family: 'Open Sans', sans-serif; */
 body{
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -12,6 +10,8 @@ p{
 	font-size: 14px;
 	color: #363636;
 }
+
+
 /* Header */
 .header{
 	background-image: url('../images/banner.png');
@@ -121,6 +121,7 @@ p{
 }
 /* Header */
 
+
 /* About section */
 .about img{
 	height: 132px;
@@ -133,6 +134,7 @@ p{
 	margin-bottom: 110px;
 }
 /* About section */
+
 
 /* Advantages */
 .advantages_bg{
@@ -345,6 +347,7 @@ p{
 }
 /* Costs */
 
+
 /* Structure */
 .structure_bg{
 	background-color: #f4f5f8;
@@ -464,6 +467,7 @@ p{
 	margin-top: -45px;
 }
 /* Products */
+
 
 /* Footer */
 footer{
@@ -627,8 +631,9 @@ footer .social p{
 }
 /* Footer */
 
+
 /* PRODUCTS PAGE */
-.prod_title h1{
+.prod_title h1, .contact_title h1{
 	margin-top: 0px;
 	font-size: 40px;
 	color: #373737;
@@ -636,9 +641,129 @@ footer .social p{
 .prod .product_container{
 	margin-left: 18px;
 }
-.prod_2 .product_container{
+.prod_2{
 	margin-top: 40px;
 	margin-bottom: 105px;
 	margin-left: 18px;
 }
 /* PRODUCTS PAGE */
+
+
+/* CONTACTS PAGE */
+.feedback h3{
+	font-size: 24px;
+	font-weight: normal;
+}
+.feedback label{
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+.feedback label>sup{
+	color: red;
+}
+.feedback input {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d9d9d9;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 0.15);
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.06);
+	width: 258px;
+	height: 48px;
+	text-indent: 20px;
+	margin-bottom: 30px;
+}
+.feedback input:focus, .message textarea:focus{
+	outline: none;
+	border-color: #f59805;
+}
+.message textarea{
+	width: 95%;
+	height: 110px;
+	text-indent: 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d9d9d9;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 0.15);
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.06);
+	padding-top: 15px;
+}
+.check{
+	margin-top: 30px;
+	margin-left: 5px;
+}
+.submit .btn-primary{
+	border: none;
+	border-radius: 4px;
+	background-color: rgb(245, 152, 5);
+	width: 200px;
+	height: 50px;
+}
+.submit .btn-primary:focus{
+	background-color: transparent;
+	border: 1px solid rgb(245, 152, 5);
+	border-radius: 4px;
+	color: #333;
+	outline: none;
+}
+.feedback{
+	border-right: 1px solid #ccc;
+}
+.contacts_sidebar h3{
+	font-size: 24px;
+}
+.place_info{
+	font-size: 14px;
+}
+.contacts_sidebar{
+	padding-left: 35px;
+	padding-right: 0px;
+}
+.contacts_sidebar .link{
+	color: #5a78ad;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+}
+.contacts_sidebar .link:hover{
+	color: #f59805;
+	text-decoration: none;
+}
+.contacts_sidebar .phone, .email, .skype, .cell_1, .cell_2, .cell_3{
+	padding-left: 30px;
+	position: relative;
+}
+.contacts_sidebar .phone::before{
+	content: url('../images/phone.png');
+	position: absolute;
+	top: -7px;
+	left: 0;
+}
+.contacts_sidebar .email::before{
+	content: url('../images/mail.png');
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.contacts_sidebar .skype::before{
+	content: url('../images/skype.png');
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.contacts_sidebar .cell_1::before{
+	content: url('../images/cell_1.png');
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.contacts_sidebar .cell_3::before{
+	content: url('../images/cell_3.png');
+	position: absolute;
+	top: -2px;
+	left: 0;
+}
+.footer_contacts{
+	margin-top: 80px;
+}
+/* CONTACTS PAGE */
