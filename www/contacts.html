@@ -70,7 +70,7 @@
 						<li role="presentation"><a href="www/contacts.html">
 							Контакти
 						</a></li>
-						<li role="presentation" class="square_link"><a href="">
+						<li role="presentation" class="square_link"><a href="calculator.html">
 							Розрахувати квадратуру
 						</a></li>
 					</ul>
@@ -202,106 +202,126 @@
 
 	<!-- MAIN -->
 
-	<!-- MAP SECTION -->
-
+	<!-- GOOGLE MAPS -->
 	<section>
 		<div id="map"></div>
 	</section>
+	<!-- GOOGLE MAPS SCRIPT -->
+	<script>
+		function initMap() {
+						var myLatLng = {lat: 49.239808, lng: 28.521315};//location
 
-	<!-- MAP SECTION -->
+						var map = new google.maps.Map(document.getElementById('map'), {
+							zoom: 15,
+							center: myLatLng,
+							scrollwheel: false
+						});
+						var marker = new google.maps.Marker({
+							position: myLatLng,
+							map: map,
+							icon: '../images/marker.png',
+							title: 'Україна, м. Вінниця, вул. Карла Маркса, 50'
+						});//location's marker
+					}
+				</script>
+				<!-- GOOGLE MAPS SCRIPT -->
+				<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfaTsak1aehp8939V-cD_Kmwl6uWteaZI&callback=initMap">
+			</script>
+			<!-- GOOGLE MAPS -->
 
-	<!-- FOOTER -->
+			<!-- FOOTER -->
 
-	<footer class="footer_contacts">
-		<div class="top_footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 loc">
-						<a href="index.html" class="logo">
-							<img src="../images/logo.png" alt="">
-						</a>
-						<address class="location">
-							21000, Україна, м.Вінниця, вул. Карла Маркса, 50 <br>
-							ТОВ "Оргтехавтоматика"
-						</address>
-					</div>
-					<div class="col-md-4 social">
-						<p>Будь завжди в курсі наших подій:</p>
-						<a href="" class="vk">
-							<i class="fa fa-vk" aria-hidden="true"></i>
-						</a>
-						<a href="" class="fb">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-						<a href="" class="youtube">
-							<i class="fa fa-youtube-play" aria-hidden="true"></i>
-						</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-8 info">
-						<address class="phone">
-							Телефон/Факс:
-							<a href="tel:+38(0432)612649" class="link">
-								+38 (0432) 61 26 49
-							</a>
-						</address>
-						<address class="email">
-							<a href="mailto:dovgalv88@gmail.com" class="link">
-								dovgalv88@gmail.com
-							</a>
-						</address>
-						<address class="skype">
-							<a href="skype:ctc-master" class="link">
-								ctc-master
-							</a>
-						</address>
-						<address class="cell_1">
-							<a href="tel:+38(097)2545054" class="link">
-								+38 (097) 254 50 54
-							</a>
-						</address>
-						<address class="cell_2">
-							<a href="tel:+38(063)8826371" class="link">
-								+38 (063) 882 63 71
-							</a>
-						</address>
-						<address class="cell_3">
-							<a href="tel:+38(050)4477998" class="link">
-								+38 (050) 44 77 998
-							</a>
-						</address>
-					</div>
-					<div class="col-md-4 subscribe">
-						<p>Підпишіться на розсилку</p>
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Введіть e-mail">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">Відправити</button>
-							</span>
+			<footer class="footer_contacts">
+				<div class="top_footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 loc">
+								<a href="index.html" class="logo">
+									<img src="../images/logo.png" alt="">
+								</a>
+								<address class="location">
+									21000, Україна, м.Вінниця, вул. Карла Маркса, 50 <br>
+									ТОВ "Оргтехавтоматика"
+								</address>
+							</div>
+							<div class="col-md-4 social">
+								<p>Будь завжди в курсі наших подій:</p>
+								<a href="" class="vk">
+									<i class="fa fa-vk" aria-hidden="true"></i>
+								</a>
+								<a href="" class="fb">
+									<i class="fa fa-facebook" aria-hidden="true"></i>
+								</a>
+								<a href="" class="youtube">
+									<i class="fa fa-youtube-play" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-8 info">
+								<address class="phone">
+									Телефон/Факс:
+									<a href="tel:+38(0432)612649" class="link">
+										+38 (0432) 61 26 49
+									</a>
+								</address>
+								<address class="email">
+									<a href="mailto:dovgalv88@gmail.com" class="link">
+										dovgalv88@gmail.com
+									</a>
+								</address>
+								<address class="skype">
+									<a href="skype:ctc-master" class="link">
+										ctc-master
+									</a>
+								</address>
+								<address class="cell_1">
+									<a href="tel:+38(097)2545054" class="link">
+										+38 (097) 254 50 54
+									</a>
+								</address>
+								<address class="cell_2">
+									<a href="tel:+38(063)8826371" class="link">
+										+38 (063) 882 63 71
+									</a>
+								</address>
+								<address class="cell_3">
+									<a href="tel:+38(050)4477998" class="link">
+										+38 (050) 44 77 998
+									</a>
+								</address>
+							</div>
+							<div class="col-md-4 subscribe">
+								<p>Підпишіться на розсилку</p>
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="Введіть e-mail">
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="button">Відправити</button>
+									</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="bot_footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 copyright">
-						<address>
-							ТОВ "Оргтехавтоматика" © Всі права захищені 2016
-						</address>
-					</div>
-					<div class="col-md-offset-4 col-md-4 design">
-						<address>
-							Розробив дизайн Січко Ігор
-						</address>
+				<div class="bot_footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4 copyright">
+								<address>
+									ТОВ "Оргтехавтоматика" © Всі права захищені 2016
+								</address>
+							</div>
+							<div class="col-md-offset-4 col-md-4 design">
+								<address>
+									Розробив дизайн Січко Ігор
+								</address>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</footer>
+			</footer>
 
-	<!-- FOOTER -->
-</body>
-</html>
+			<!-- FOOTER -->
+		</body>
+		</html>

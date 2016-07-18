@@ -32,6 +32,7 @@
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<script src="js/responsiveslides.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/jquery.retina.js"></script>
 </head>
 <body>
 	<!-- HEADER -->
@@ -42,7 +43,7 @@
 				<div class="row nav_bar">
 					<div class="col-md-3 logo">
 						<a href="index.html">
-							<img src="images/logo.png" alt="logo">
+							<img src="images/logo.png" alt="logo" data-retina="images/logo.png">
 						</a>
 						<div class="btn-group">
 							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -65,7 +66,7 @@
 							<li role="presentation"><a href="www/contacts.html">
 								Контакти
 							</a></li>
-							<li role="presentation" class="square_link"><a href="">
+							<li role="presentation" class="square_link"><a href="www/calculator.html">
 								Розрахувати квадратуру
 							</a></li>
 						</ul>
@@ -78,9 +79,11 @@
 							<canvas id="my_canvas" width="200" height="200"></canvas>
 						</div>
 						<div class="row banner_btn">
-							<button class="btn btn-primary">
-								Розрахувати квадратуру
-							</button>
+							<a href="www/calculator.html">
+								<button class="btn btn-primary">
+									Розрахувати квадратуру
+								</button>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -96,7 +99,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 text-center about">
-					<img src="images/universal.png" alt="">
+					<img src="images/universal.png" alt="" data-retina="images/universal.png">
 					<h3>УНІВЕРСАЛЬНІ</h3>
 					<p>Три варіанти комплектації котла. 
 						<br>
@@ -106,7 +109,7 @@
 					</p>
 				</div>
 				<div class="col-md-3 text-center about">
-					<img src="images/economy.png" alt="">
+					<img src="images/economy.png" alt="" data-retina="images/economy.png">
 					<h3>ЕКОНОМІЧНІ</h3>
 					<p>
 						Сервопривод "Belimo" ідеально дозує 
@@ -119,7 +122,7 @@
 					</p>
 				</div>
 				<div class="col-md-3 text-center about">
-					<img src="images/safe.png" alt="">
+					<img src="images/safe.png" alt="" data-retina="images/safe.png">
 					<h3>НАДІЙНІ</h3>
 					<p>
 						Комплектуючі відомих європейських 
@@ -130,7 +133,7 @@
 					</p>
 				</div>
 				<div class="col-md-3 text-center about">
-					<img src="images/unpretentious.png" alt="">
+					<img src="images/unpretentious.png" alt="" data-retina="images/unpretentious.png">
 					<h3>НЕВИБАГЛИВІ</h3>
 					<p>
 						Котли працюють на деревині <br>
@@ -395,8 +398,6 @@
 												</a>
 											</li>
 										</ul>
-										<a href="#" class="rslides_nav rslides1_nav prev"></a>
-										<a href="#" class="rslides_nav rslides1_nav next"></a>
 									</div>
 								</div>
 							</div>

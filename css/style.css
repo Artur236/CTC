@@ -14,15 +14,17 @@ p{
 
 /* Header */
 .header{
-	background-image: url('../images/banner.png');
+	background:-webkit-linear-gradient(rgba(31, 50, 69, 0.722),rgba(31, 50, 69, 0.722));
+	background:-o-linear-gradient(rgba(31, 50, 69, 0.722),rgba(31, 50, 69, 0.722));
+	background:linear-gradient(rgba(31, 50, 69, 0.722),rgba(31, 50, 69, 0.722)), url('../images/banner.png');
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-attachment: fixed;
-	/* height: 100%; */
+	height: 100%;
 }
 .header_bg{
-	background-color: rgba(31, 50, 69, 0.722);
-	min-height: 700px;
+	/* background-color: rgba(31, 50, 69, 0.722); */
+	/* min-height: 700px; */
 }
 .nav_bar{
 	margin-top: 35px;
@@ -40,6 +42,9 @@ p{
 .btn-group .dropdown-toggle:focus{
 	border: 1px solid #ccc;
 	background-color: transparent;
+}
+.nav li:nth-child(3){
+	margin-right: 20px;
 }
 .nav li>a{
 	color: #fff;
@@ -65,8 +70,8 @@ p{
 }
 .nav .square_link>a:hover{
 	color: #fff;
-	border: 2px solid rgb(235, 141, 14);
-	background-color: transparent;
+	border: 2px solid rgb(250, 141, 14);
+	background-color: rgb(250, 141, 14);
 	border-radius: 4px;
 }
 .navbar-fixed-top{
@@ -87,6 +92,7 @@ p{
 	margin-bottom: 60px;
 	color: #fff;
 	font-size: 40px;
+	font-weight: 300;
 }
 .canvas{
 	position: relative;
@@ -108,14 +114,16 @@ p{
 	border-radius: 4px;
 	border-color: transparent;
 	background-color: rgb(235, 141, 14);
-	width: 240px;
-	height: 50px;
+	padding: 20px 25px;
 	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
 	margin-bottom: 130px;
 }
+.banner_btn .btn-primary:hover{
+	background-color: rgb(250, 141, 14);
+}
 .banner_btn .btn-primary:focus{
-	background-color: rgb(235, 141, 14);
+	background-color: rgb(250, 141, 14);
 	color: #333;
 	outline: none;
 }
@@ -310,6 +318,9 @@ p{
 	font-family: 'Open Sans', sans-serif;
 	color: #363636;
 }
+.costs span:last-child{
+	margin-top: 0px;
+}
 .costs .col-md-2{
 	margin-bottom: 100px;
 }
@@ -386,7 +397,7 @@ p{
 	position: relative;
 }
 .product_container{
-	margin-right: 10px;
+	margin-right: 20px;
 	width: 262px;
 	height: 470px;
 	background-color: #fff;
@@ -398,6 +409,9 @@ p{
 }
 .product_container img{
 	width: 260px;
+}
+.product_container:hover>img{
+	opacity: 0.7;
 }
 .product_description{
 	padding: 12px;
@@ -449,8 +463,9 @@ p{
 .rslides1_nav.next {
 	left: auto;
 	background-position: right top;
-	right: -30px;
-	background: transparent url('../images/next_btn.png') no-repeat left;
+	right: -60px;
+	background: transparent url('../images/btn_prev.png') no-repeat left;
+	transform: rotate(180deg);
 }
 .rslides1_nav {
 	position: absolute;
@@ -461,10 +476,18 @@ p{
 	text-indent: -9999px;
 	overflow: hidden;
 	text-decoration: none;
-	height: 70px;
-	width: 70px;
-	background: transparent url("../images/prev_btn.png") no-repeat left top;
+	height: 71px;
+	width: 71px;
+	background: transparent url("../images/btn_prev.png") no-repeat left top;
 	margin-top: -45px;
+}
+.rslides1_nav.next:hover{
+	background: transparent url('../images/btn_next_hover.png') no-repeat left;
+	transform: rotate(0deg);
+}
+.rslides1_nav:hover{
+	background: transparent url('../images/btn_next_hover.png') no-repeat left top;
+	transform: rotate(180deg);
 }
 /* Products */
 
@@ -552,6 +575,10 @@ footer .social p{
 	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
+.subscribe input:focus{
+	outline: none;
+	box-shadow: none;
+}
 .subscribe .btn-default{
 	width: 100px;
 	height: 50px;
@@ -563,6 +590,9 @@ footer .social p{
 	border-top-right-radius: 4px;
 	border-bottom-right-radius: 4px;
 }
+.subscribe .btn-default:hover{
+	background-color: rgb(250, 141, 14);
+}
 .subscribe .btn-default:focus{
 	outline: none;
 }
@@ -571,6 +601,7 @@ footer .social p{
 }
 .info address{
 	position: relative;
+	padding-left: 0px;
 }
 .link{
 	font-size: 14px;
@@ -639,12 +670,9 @@ footer .social p{
 	color: #373737;
 }
 .prod .product_container{
-	margin-left: 18px;
-}
-.prod_2{
-	margin-top: 40px;
-	margin-bottom: 105px;
-	margin-left: 18px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 50px;
 }
 /* PRODUCTS PAGE */
 
@@ -702,10 +730,13 @@ footer .social p{
 }
 .submit .btn-primary:focus{
 	background-color: transparent;
-	border: 1px solid rgb(245, 152, 5);
+	border: 1px solid rgb(250, 152, 5);
 	border-radius: 4px;
 	color: #333;
 	outline: none;
+}
+.submit .btn-primary:hover{
+	background-color: rgb(250, 152, 5);
 }
 .feedback{
 	border-right: 1px solid #ccc;
@@ -763,7 +794,186 @@ footer .social p{
 	top: -2px;
 	left: 0;
 }
-.footer_contacts{
+#map{
 	margin-top: 80px;
+	width: 100%;
+	height: 400px;
 }
 /* CONTACTS PAGE */
+
+/* CALCULATOR PAGE */
+.calc h5{
+	font-size: 24px;
+	color: #373737;
+	margin-bottom: 28px;
+}
+.calc_data{
+	background-color: #f4f5f8;
+	padding-left: 20px;
+	padding-right: 30px;
+}
+.calc_data label:first-child, .calc_data input:first-child{
+	margin-top: 58px;
+}
+.calc_data input, select{
+	float: right;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d0d0d3;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 0.15);
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.06);
+	width: 218px;
+	height: 48px;
+	text-indent: 20px;
+	margin-bottom: 25px;
+}
+.calc_data input:focus, select:focus{
+	border-color: #f59805;
+	outline: none;
+}
+.calc_data label{
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	color: #000;
+	padding-bottom: 50px;
+}
+.calc_data label>sup{
+	color: red;
+}
+.left_column, .right_column{
+	padding: 0px;
+}
+.calculation{
+	margin-right: 0px;
+	margin-left: 0px;
+}
+.recomended_product hr{
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+.recomended_product .recomend{
+	font-size: 16px;
+	color: #000;
+	display: block;
+	margin-bottom: 17px;
+}
+.recomended_product .prod_link{
+	font-size: 24px;
+	color: #5b6a89;
+	display: block;
+	margin-bottom: 17px;
+}
+.recomended_product .recomend_price{
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	color: #363636;
+	margin-bottom: 43px;
+	display: inline-block;
+	position: relative;
+	padding-left: 22px;
+}
+.recomended_product .recomend_price b{
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
+	color: #57cd7b;
+	display: inline-block;
+	margin-left: 14px;
+}
+.recomended_product .recomend_price::before{
+	content: url('../images/recomend_price.png');
+	position: absolute;
+	top: 12px;
+	left: 2px;
+}
+.recomended_product .recomend_power, .recomend_class, .recomend_square, .recomend_time{
+	margin-bottom: 16px;
+	display: block;
+	position: relative;
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	color: #666;
+	padding-left: 22px;
+}
+.recomended_product .recomend_power::before{
+	content: url('../images/recomend_power.png');
+	position: absolute;
+	top: 3px;
+	left: 2px;
+}
+.recomended_product .recomend_class::before{
+	content: url('../images/recomend_class.png');
+	position: absolute;
+	top: 1px;
+	left: 2px;
+}
+.recomended_product .recomend_square::before{
+	content: url('../images/square.png');
+	position: absolute;
+	top: 1px;
+	left: 2px;
+}
+.recomended_product .recomend_time::before{
+	content: url('../images/time.png');
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+.btn-primary.manager_call {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 80px;
+	padding-right: 25px;
+	background-color: #ff9f1c;
+	color: #fff;
+	font-size: 14px;
+	border: none;
+	position: relative;
+}
+.btn-primary.manager_call:focus{
+	background-color: rgb(250, 152, 5);
+	outline: none;
+}
+.btn-primary.manager_call:hover{
+	background-color: rgb(250, 152, 5);
+}
+.btn-primary.manager_call::before{
+	content: url('../images/manager_call.png');
+	position: absolute;
+	top: 13px;
+	left: 30px;
+}
+.right_part .btn-primary{
+	padding: 20px 84px;
+	background-color: transparent;
+	border: 1px solid #ff9f1c;
+	color: #ff9f1c;
+	font-size: 14px;
+	border-radius: 4px;
+	position: relative;
+	margin-top: 109px;
+	margin-left: 20px;
+}
+.right_part .btn-primary::after{
+	content: '>';
+	color: #ff9f1c;
+	position: absolute;
+	top: 20px;
+	right: 50px;
+}
+.right_part .btn-primary:focus{
+	background-color: rgb(250, 152, 5);
+	color: #fff;
+}
+.right_part .btn-primary:hover{
+	background-color: rgb(250, 152, 5);
+	color: #fff;
+}
+.right_part .btn-primary:hover::after{
+	content: '>';
+	color: #fff;
+	position: absolute;
+	top: 20px;
+	right: 50px;
+}
+/* CALCULATOR PAGE */
