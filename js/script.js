@@ -59,6 +59,6 @@ $(function(){
      // override window.devicePixelRatio
      overridePixelRation: false
  });
-	});
+});
 
 

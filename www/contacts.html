@@ -58,7 +58,7 @@
 						<li role="presentation"><a href="products.html">
 							Продукція та ціни
 						</a></li>
-						<li role="presentation"><a href="#">
+						<li role="presentation"><a href="articles.html">
 							Корисна інформація
 						</a></li>
 						<li role="presentation"><a href="">
@@ -67,7 +67,7 @@
 						<li role="presentation"><a href="#">
 							Форум
 						</a></li>
-						<li role="presentation"><a href="www/contacts.html">
+						<li role="presentation"><a href="contacts.html" id="contacts">
 							Контакти
 						</a></li>
 						<li role="presentation" class="square_link"><a href="calculator.html">
@@ -114,49 +114,49 @@
 					<h3>
 						Зворотній зв’язок
 					</h3>
-					<div class="row">
-						<div class="col-md-6">
-							<label>
-								Ім’я<sup>*</sup>:
-							</label> <br>
-							<input type="text" placeholder="Введіть Ваше ім’я">
+					<form action="send_form_email.php" method="post" enctype="text/plain" class="feedback_form" name="contactform">
+						<div class="row">
+							<div class="col-md-6">
+								<label>
+									Ім’я<sup>*</sup>:
+								</label> <br>
+								<input type="text" placeholder="Введіть Ваше ім’я" name="name" required>
+							</div>
+							<div class="col-md-6">
+								<label>
+									Email<sup>*</sup>:
+								</label> <br>
+								<input type="text" placeholder="Введіть Вашу ел. пошту" name="mail" required>
+							</div>
 						</div>
-						<div class="col-md-6">
-							<label>
-								Email<sup>*</sup>:
-							</label> <br>
-							<input type="text" placeholder="Введіть Вашу ел. пошту">
+						<div class="row">
+							<div class="col-md-12">
+								<label>
+									Заголовок:
+								</label> <br>
+								<input type="text" name="title">
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12">
-							<label>
-								Заголовок:
-							</label> <br>
-							<input type="text">
+						<div class="row">
+							<div class="col-md-12 message">
+								<label>
+									Повідомлення<sup>*</sup>:
+								</label> <br>
+								<textarea placeholder="Напишіть повідомлення тут" name="comment" required></textarea>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12 message">
+						<div class="row check">
 							<label>
-								Повідомлення<sup>*</sup>:
-							</label> <br>
-							<textarea placeholder="Напишіть повідомлення тут"></textarea>
+								2 + 3 =
+							</label>
+							<input type="text" placeholder="Скільки буде?">
 						</div>
-					</div>
-					<div class="row check">
-						<label>
-							2 + 3 =
-						</label>
-						<input type="text" placeholder="Скільки буде?">
-					</div>
-					<div class="row submit">
-						<div class="col-md-5">
-							<button class="btn btn-primary">
-								Відправити
-							</button>
-						</div> 
-					</div>
+						<div class="row submit">
+							<div class="col-md-5">
+								<input class="btn btn-primary" type="submit" value="Відправити" id="submit">
+							</div> 
+						</div>
+					</form>
 				</div>
 				<div class="col-md-3 contacts_sidebar">
 					<h3>НАШІ КОНТАКТИ</h3>
