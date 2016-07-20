@@ -1188,8 +1188,39 @@ footer .social p{
 #thumbnail-slider:hover {transform:scale(1); opacity:1;} 
 #thumbnail-slider ul li.active { border-color:white;} 
 #thumbnail-slider .thumb { background-size:contain; }
+#table tr>td{
+	padding: 20px;
+	font-size: 14px;
+	color: #363636;
+}
+#table tr>th{
+	padding: 25px;
+	font-size: 20px;
+	font-family: 'Ubuntu', sans-serif;
+	color: #363636;
+	font-weight: 200;
+} 
+#table .table_price td:first-child{
+	color: #363636;
+	font-size: 14px;
+	font-weight: normal;
+}
+#table .table_price td{
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	color: #57cd7b;
+	font-weight: bold;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+	border-top: none;
+}
+.table tr:nth-child(even){
+	background-color: #f7f7f9;
+}
+.position_name{
+	border-bottom: 1px solid #ccc;
+}
 /* PRODUCT SIMPLE PAGE */
-ul.topnav li.icon {display: none;}
 /* MEDIA QUERIES */
 @media screen and (min-width:1024px) and (max-width:1199px) {
 	.costs span{
@@ -1480,6 +1511,9 @@ ul.topnav li.icon {display: none;}
 	}
 	.contact_title{
 		margin-bottom: 430px;
+	}
+	.articles.contact_title, .contact.contact_title{
+		margin-bottom: 0px;
 	}
 	.news.social_product{
 		margin-bottom: 50px;
