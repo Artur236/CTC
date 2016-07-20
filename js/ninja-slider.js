@@ -1,4 +1,4 @@
-
+//слайдер на странице товара
 var nsOptions =
 {
     sliderId: "ninja-slider",

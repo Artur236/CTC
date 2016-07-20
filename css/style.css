@@ -27,6 +27,10 @@ p{
 	/* background-color: rgba(31, 50, 69, 0.722); */
 	/* min-height: 700px; */
 }
+.logo{
+	position: relative;
+	display: inline-block;
+}
 .nav_bar{
 	margin-top: 35px;
 }
@@ -46,6 +50,9 @@ p{
 }
 #contacts{
 	margin-right: 20px;
+}
+.slicknav_menu{
+	display: none;
 }
 .nav li>a{
 	color: #fff;
@@ -376,6 +383,9 @@ p{
 .structure_description{
 	margin-bottom: 140px;
 }
+.structure_img img{
+	width: 100%;
+}
 /* Structure */
 
 
@@ -398,7 +408,7 @@ p{
 	position: relative;
 }
 .product_container{
-	margin-right: 20px;
+	margin-right: 15px;
 	width: 262px;
 	height: 470px;
 	background-color: #fff;
@@ -464,7 +474,7 @@ p{
 .rslides1_nav.next {
 	left: auto;
 	background-position: right top;
-	right: -60px;
+	right: -40px;
 	background: transparent url('../images/btn_prev.png') no-repeat left;
 	transform: rotate(180deg);
 }
@@ -472,7 +482,7 @@ p{
 	position: absolute;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	top: 50%;
-	left: -45px;
+	left: -40px;
 	z-index: 99;
 	text-indent: -9999px;
 	overflow: hidden;
@@ -1181,5 +1191,180 @@ footer .social p{
 /* PRODUCT SIMPLE PAGE */
 
 /* MEDIA QUERIES */
-
+@media screen and (min-width:1024px) and (max-width:1199px) {
+	.costs span{
+		height: 44px;
+	}
+	.costs .col-md-2{
+		margin-right: 131px;
+		padding-left: 0px;
+		margin-left: 30px;
+	}
+	.product_container{
+		margin-right: 120px;
+		margin-left: 80px;
+		margin-bottom: 20px;
+	}
+	.rslides1_nav{
+		left: 20px;
+	}
+	.rslides1_nav.next{
+		right: 20px;
+	}
+	.social .youtube i{
+		margin-top: 5px;
+	}
+	.info .skype, .info .cell_3{
+		padding-left: 22px;
+	}
+	.info .skype::before, .info .cell_3::before{
+		left: -13px;
+	}
+	.nav{
+		display: none;
+	}
+	.slicknav_menu{
+		display: block;
+		position: fixed;
+		right: 0;
+		margin-top: 30px;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 1040;
+	}
+	.slicknav_menu .slicknav_menutxt{
+		display: none;
+	}
+	.slicknav_menu .slicknav_icon{
+		margin:0;
+	}
+}
+@media screen and (min-width:640px) and (max-width:959px) {
+	.advantages_bg{
+		background-size: 100% 100%;
+	}
+	.nav{
+		display: none;
+	}
+	.slicknav_menu{
+		display: block;
+		position: fixed;
+		right: 0;
+		margin-top: 30px;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 1040;
+	}
+	.slicknav_menu .slicknav_menutxt{
+		display: none;
+	}
+	.slicknav_menu .slicknav_icon{
+		margin:0;
+	}
+	.about p{
+		margin-bottom: 50px;
+	}
+	.advant_list{
+		margin-bottom: 50px;
+	}
+	.bar_container{
+		margin: 0 auto;
+	}
+	.structure_img img{
+		margin-bottom: 30px;
+	}
+	.product_container{
+		display: inline-block;
+		margin-right: 0px;
+		margin-left: 40px;
+		margin-bottom: 15px;
+	}
+	.rslides1_nav{
+		left: 7px;
+	}
+	.rslides1_nav.next{
+		right: 30px;
+	}
+	footer .social p{
+		margin-top: 20px;
+	}
+	.design address{
+		float: left;
+		margin-top: 0px;
+	}
+}
+@media screen and (min-width:320px) and (max-width:639px) {
+	.banner_text h1{
+		font-size: 35px;
+	}
+	.nav{
+		display: none;
+	}
+	.slicknav_menu{
+		display: block;
+		position: fixed;
+		right: 0;
+		margin-top: 30px;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 1040;
+	}
+	.slicknav_menu .slicknav_menutxt{
+		display: none;
+	}
+	.slicknav_menu .slicknav_icon{
+		margin:0;
+	}
+	.btn-group .dropdown-toggle{
+		display: none;
+	}
+	.about p{
+		margin-bottom: 20px;
+	}
+	.advantages_bg{
+		background-size: 100% 100%;
+	}
+	.advant_list{
+		margin-bottom: 0px;
+	}
+	.bar_container{
+		margin: 0 auto;
+	}
+	.structure_description, .structure_img img{
+		margin-bottom: 20px;
+	}
+	.social .youtube i{
+		margin-top: 5px;
+	}
+	footer .location{
+		margin-left: 0px;
+		margin-top: 15px;
+	}
+	footer .social p{
+		margin-top: 20px;
+	}
+	.info .email, .info .skype, .info .cell_2, .info .cell_3{
+		padding-left: 20px;
+	}
+	.info .email::before, .info .skype::before, .info .cell_1::before, .info .cell_3::before{
+		left: -10px;
+	}
+	.design address{
+		float: left;
+	}
+	.rslides1_nav{
+		top: -30px;
+		right: 0;
+		left: 90px;
+	}
+	.rslides1_nav.next{
+		right: 85px;
+	}
+	.products p{
+		margin-bottom: 80px;
+	}
+	.product_container{
+		margin-left: -10px;
+		margin-right: 0px;
+		padding-left: 0px;
+		margin-bottom: 25px;
+	}
+}
 /* MEDIA QUERIES */

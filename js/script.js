@@ -1,14 +1,22 @@
 $(function(){
-	$(window).scroll(function() {
+	$(window).scroll(function() {//при скролле меню фиксируется
 		if ($(window).scrollTop() > 350) {
 			$('.header .nav_bar').addClass('navbar-fixed-top');
+			$('.slicknav_menu').css('marginTop', '10px');
 		}
 		else {
 			$('.header .nav_bar').removeClass('navbar-fixed-top');
+			$('.slicknav_menu').css('marginTop', '30px');
 		}
+		$(window).resize(function(){
+			if ($(window).width() <= 320){
+				$('.slide').removeClass('rslides');
+				$('.slide').removeClass('rslides1');
+			}	
+		});
 	});
 
-	var ctx = document.getElementById('my_canvas').getContext('2d');
+	var ctx = document.getElementById('my_canvas').getContext('2d');//canvas - прогресс бар на главной странице
 	var al = 0;
 	var start = 0;
 	var cw = ctx.canvas.width;
@@ -39,7 +47,7 @@ $(function(){
 	window.onload = progressSim;
 
 		// Slider
-		$(function() {
+		$(function() {//слайдер на главной странице
 			$(".rslides").responsiveSlides({
 				auto:false,
 				navContainer:"",
@@ -47,7 +55,10 @@ $(function(){
 			}
 			);
 		});
-		$('img').retina({
+		$(function(){
+			$('#menu').slicknav();
+		});
+		$('img').retina({//ретина плагин для изображений
     // Check for data-retina attribute. If exists, swap out image
     dataRetina: true,
      // Suffix to append to image file name
@@ -59,6 +70,6 @@ $(function(){
      // override window.devicePixelRatio
      overridePixelRation: false
  });
-});
+	});
 
 
