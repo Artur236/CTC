@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 	<!-- STYLES -->
+	<link rel="stylesheet" href="../css/slicknav.css">
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/style.css">
 
@@ -54,7 +55,7 @@
 					</div>
 				</div>
 				<div class="col-md-9">
-					<ul class="nav nav-pills pull-right">
+					<ul id="menu" class="nav nav-pills pull-right">
 						<li role="presentation"><a href="products.html">
 							Продукція та ціни
 						</a></li>
@@ -77,6 +78,13 @@
 				</div>
 			</div>
 		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="../js/jquery.slicknav.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#menu').slicknav();
+			});
+		</script>
 	</header>
 
 	<!-- HEADER -->
@@ -96,7 +104,7 @@
 			</div>
 			<hr>
 			<div class="row">
-				<div class="col-md-12 contact_title">
+				<div class="col-md-12 calc contact_title">
 					<h1>
 						КАЛЬКУЛЯТОР
 					</h1>

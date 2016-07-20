@@ -2,18 +2,12 @@ $(function(){
 	$(window).scroll(function() {//при скролле меню фиксируется
 		if ($(window).scrollTop() > 350) {
 			$('.header .nav_bar').addClass('navbar-fixed-top');
-			$('.slicknav_menu').css('marginTop', '10px');
+			$('.main_page .slicknav_menu').css('marginTop', '10px');
 		}
 		else {
 			$('.header .nav_bar').removeClass('navbar-fixed-top');
-			$('.slicknav_menu').css('marginTop', '30px');
+			$('.main_page .slicknav_menu').css('marginTop', '30px');
 		}
-		$(window).resize(function(){
-			if ($(window).width() <= 320){
-				$('.slide').removeClass('rslides');
-				$('.slide').removeClass('rslides1');
-			}	
-		});
 	});
 
 	var ctx = document.getElementById('my_canvas').getContext('2d');//canvas - прогресс бар на главной странице
@@ -56,6 +50,7 @@ $(function(){
 			);
 		});
 		$(function(){
+			$('#menu').slicknav();
 			$('#menu').slicknav();
 		});
 		$('img').retina({//ретина плагин для изображений

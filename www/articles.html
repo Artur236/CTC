@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 	<!-- STYLES -->
+	<link rel="stylesheet" href="../css/slicknav.css">
 	<link rel="stylesheet" href="../css/normalize.css">
 	<link rel="stylesheet" href="../css/style.css">
 
@@ -54,7 +55,7 @@
 					</div>
 				</div>
 				<div class="col-md-9">
-					<ul class="nav nav-pills pull-right">
+					<ul id="menu" class="nav nav-pills pull-right">
 						<li role="presentation"><a href="products.html">
 							Продукція та ціни
 						</a></li>
@@ -77,6 +78,13 @@
 				</div>
 			</div>
 		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="../js/jquery.slicknav.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('#menu').slicknav();
+			});
+		</script>
 	</header>
 
 	<!-- HEADER -->
@@ -107,11 +115,11 @@
 			<!-- В данной секции начинаются новости -->
 			<div class="row news">
 				<div class="col-md-4">
-				<!-- Изображение для новости -->
+					<!-- Изображение для новости -->
 					<img src="../images/gallery/news_1.png" alt="">
 				</div>
 				<div class="col-md-8 description_text">
-				<!-- Название новости -->
+					<!-- Название новости -->
 					<a class="article_title" href="news_1.html">
 						Розрахунок економічного ефекту застосування газогенераторних
 						котлів.
@@ -173,131 +181,130 @@
 					<div class="col-md-8 description_text">
 						<a class="article_title" href="news_5.html">
 							Розрахунок економічного ефекту застосування газогенераторних
-							котлів. В заголовку не більше двох стрічок тексту, якщо більше...
-						</a>
-						<span class="article_date">20 червня, 2016 р.</span>
-						<p class="article_txt">Орієнтовно, для опалення 10 кв. м (до 30 куб. м) добре утепленого приміщення потрібно приблизно 1 кВт теплової потужності (незалежно від використовуваного палива, потужність котла зазвичай вимірюється в кВт). Отже, для приміщення площею 400 кв. м буде потрібно котел потужністю приблизно 40 кВт.</p>
-						<a href="news_5.html" class="article_more">Подробнее</a>
-					</div>
-				</div>
-				<div class="row news">
-					<div class="col-md-4">
-						<img src="../images/gallery/news_6.png" alt="">
-					</div>
-					<div class="col-md-8 description_text">
-						<a class="article_title" href="news_6.html">
-							Нові піролізні котли мають ККД до 90%
-						</a>
-						<span class="article_date">20 червня, 2016 р.</span>
-						<p class="article_txt">Якби котел працював безперервно, то в місяць знадобилося б: 40 кВт х 24 години х 30 днів = 28800 кВт / годин. Беручи до уваги, що котел буде працювати приблизно половину всього часу (або на половину максимальної потужності), ділимо 28800 кВт / годин на 2 і отримуємо 14400 кВт / годин. Це витрати в середньому на місяць опалювального сезону. 
-							<br>
-							Множимо на 7 місяців опалювального сезону, і отримуємо 100800 кВт / годин на рік. Залежно від різних факторів (зовнішня температура, утеплення стін тощо) ця цифра може змінюватися як у велику. </p>
-							<a href="news_6.html" class="article_more">Подробнее</a>
+							котлів.
+							<span class="article_date">20 червня, 2016 р.</span>
+							<p class="article_txt">Орієнтовно, для опалення 10 кв. м (до 30 куб. м) добре утепленого приміщення потрібно приблизно 1 кВт теплової потужності (незалежно від використовуваного палива, потужність котла зазвичай вимірюється в кВт). Отже, для приміщення площею 400 кв. м буде потрібно котел потужністю приблизно 40 кВт.</p>
+							<a href="news_5.html" class="article_more">Подробнее</a>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12 text-center show_more">
-							<button class="btn btn-primary">
-								Показати ще
-							</button>
+					<div class="row news">
+						<div class="col-md-4">
+							<img src="../images/gallery/news_6.png" alt="">
 						</div>
-					</div>
-				</div>
-			</main>
-
-			<!-- MAIN -->
-			<!-- FOOTER -->
-
-			<footer class="footer_contacts">
-				<div class="top_footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-8 loc">
-								<a href="index.html" class="logo">
-									<img src="../images/logo.png" alt="">
-								</a>
-								<address class="location">
-									21000, Україна, м.Вінниця, вул. Карла Маркса, 50 <br>
-									ТОВ "Оргтехавтоматика"
-								</address>
-							</div>
-							<div class="col-md-4 social">
-								<p>Будь завжди в курсі наших подій:</p>
-								<a href="" class="vk">
-									<i class="fa fa-vk" aria-hidden="true"></i>
-								</a>
-								<a href="" class="fb">
-									<i class="fa fa-facebook" aria-hidden="true"></i>
-								</a>
-								<a href="" class="youtube">
-									<i class="fa fa-youtube-play" aria-hidden="true"></i>
-								</a>
+						<div class="col-md-8 description_text">
+							<a class="article_title" href="news_6.html">
+								Нові піролізні котли мають ККД до 90%
+							</a>
+							<span class="article_date">20 червня, 2016 р.</span>
+							<p class="article_txt">Якби котел працював безперервно, то в місяць знадобилося б: 40 кВт х 24 години х 30 днів = 28800 кВт / годин. Беручи до уваги, що котел буде працювати приблизно половину всього часу (або на половину максимальної потужності), ділимо 28800 кВт / годин на 2 і отримуємо 14400 кВт / годин. Це витрати в середньому на місяць опалювального сезону. 
+								<br>
+								Множимо на 7 місяців опалювального сезону, і отримуємо 100800 кВт / годин на рік. Залежно від різних факторів (зовнішня температура, утеплення стін тощо) ця цифра може змінюватися як у велику. </p>
+								<a href="news_6.html" class="article_more">Подробнее</a>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-8 info">
-								<address class="phone">
-									Телефон/Факс:
-									<a href="tel:+38(0432)612649" class="link">
-										+38 (0432) 61 26 49
-									</a>
-								</address>
-								<address class="email">
-									<a href="mailto:dovgalv88@gmail.com" class="link">
-										dovgalv88@gmail.com
-									</a>
-								</address>
-								<address class="skype">
-									<a href="skype:ctc-master" class="link">
-										ctc-master
-									</a>
-								</address>
-								<address class="cell_1">
-									<a href="tel:+38(097)2545054" class="link">
-										+38 (097) 254 50 54
-									</a>
-								</address>
-								<address class="cell_2">
-									<a href="tel:+38(063)8826371" class="link">
-										+38 (063) 882 63 71
-									</a>
-								</address>
-								<address class="cell_3">
-									<a href="tel:+38(050)4477998" class="link">
-										+38 (050) 44 77 998
-									</a>
-								</address>
+							<div class="col-md-12 text-center show_more">
+								<button class="btn btn-primary">
+									Показати ще
+								</button>
 							</div>
-							<div class="col-md-4 subscribe">
-								<p>Підпишіться на розсилку</p>
-								<div class="input-group">
-									<input type="text" class="form-control" placeholder="Введіть e-mail">
-									<span class="input-group-btn">
-										<button class="btn btn-default" type="button">Відправити</button>
-									</span>
+						</div>
+					</div>
+				</main>
+
+				<!-- MAIN -->
+				<!-- FOOTER -->
+
+				<footer class="footer_contacts">
+					<div class="top_footer">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-8 loc">
+									<a href="index.html" class="logo">
+										<img src="../images/logo.png" alt="">
+									</a>
+									<address class="location">
+										21000, Україна, м.Вінниця, вул. Карла Маркса, 50 <br>
+										ТОВ "Оргтехавтоматика"
+									</address>
+								</div>
+								<div class="col-md-4 social">
+									<p>Будь завжди в курсі наших подій:</p>
+									<a href="" class="vk">
+										<i class="fa fa-vk" aria-hidden="true"></i>
+									</a>
+									<a href="" class="fb">
+										<i class="fa fa-facebook" aria-hidden="true"></i>
+									</a>
+									<a href="" class="youtube">
+										<i class="fa fa-youtube-play" aria-hidden="true"></i>
+									</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-8 info">
+									<address class="phone">
+										Телефон/Факс:
+										<a href="tel:+38(0432)612649" class="link">
+											+38 (0432) 61 26 49
+										</a>
+									</address>
+									<address class="email">
+										<a href="mailto:dovgalv88@gmail.com" class="link">
+											dovgalv88@gmail.com
+										</a>
+									</address>
+									<address class="skype">
+										<a href="skype:ctc-master" class="link">
+											ctc-master
+										</a>
+									</address>
+									<address class="cell_1">
+										<a href="tel:+38(097)2545054" class="link">
+											+38 (097) 254 50 54
+										</a>
+									</address>
+									<address class="cell_2">
+										<a href="tel:+38(063)8826371" class="link">
+											+38 (063) 882 63 71
+										</a>
+									</address>
+									<address class="cell_3">
+										<a href="tel:+38(050)4477998" class="link">
+											+38 (050) 44 77 998
+										</a>
+									</address>
+								</div>
+								<div class="col-md-4 subscribe">
+									<p>Підпишіться на розсилку</p>
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="Введіть e-mail">
+										<span class="input-group-btn">
+											<button class="btn btn-default" type="button">Відправити</button>
+										</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="bot_footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-4 copyright">
-								<address>
-									ТОВ "Оргтехавтоматика" © Всі права захищені 2016
-								</address>
-							</div>
-							<div class="col-md-offset-4 col-md-4 design">
-								<address>
-									Розробив дизайн Січко Ігор
-								</address>
+					<div class="bot_footer">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-4 copyright">
+									<address>
+										ТОВ "Оргтехавтоматика" © Всі права захищені 2016
+									</address>
+								</div>
+								<div class="col-md-offset-4 col-md-4 design">
+									<address>
+										Розробив дизайн Січко Ігор
+									</address>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</footer>
+				</footer>
 
-			<!-- FOOTER -->
-		</body>
-		</html>
+				<!-- FOOTER -->
+			</body>
+			</html>
