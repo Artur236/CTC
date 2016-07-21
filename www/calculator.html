@@ -33,6 +33,7 @@
 	<script src="../js/jquery-1.8.3.min.js"></script>
 	<script src="../js/responsiveslides.min.js"></script>
 	<script src="../js/script.js"></script>
+	<script src="../js/calculator.js"></script>
 </head>
 <body>
 	<!-- HEADER -->
@@ -122,40 +123,59 @@
 				</div>
 			</div>
 			<div class="row calculation">
-				<div class="col-md-6 calc_data">
-					<div class="col-md-6 left_column">
+				<div class="col-md-12 calc_data">
+					<div class="row">
 						<label>
 							Площадь помещения, м2<sup>*</sup>:
 						</label>
+						<input type="text" placeholder="Введіть площу" id="plosh">
+					</div>
+					<div class="row">
 						<label>
 							Высота стен, м<sup>*</sup>:
-						</label><br>
+						</label>
+						<input type="text" placeholder="Введіть висоту" id="vis">
+					</div>
+					<div class="row">
 						<label>
 							Дом<sup>*</sup>:
 						</label>
+						<select name="house" id="house" oninput="raschet_kotla()">
+							<option value=""></option>
+							<option value="55">Добре утеплений</option>
+							<option value="80">Среднеутепленный</option>
+							<option value="100">Не утепленный</option>
+						</select>
+					</div>
+					<div class="row">
 						<label>
 							Температура помещения, С<sup>*</sup>:
 						</label>
+						<input type="text" placeholder="Введіть температуру" id="tempe">
+					</div>
+					<div class="row">
 						<label>
 							Длительность отопительного
 							сезона, днів<sup>*</sup>:
 						</label>
+						<input type="text" placeholder="Введіть кількість днів" id="days" oninput="raschet_kotla()">
 					</div>
-					<div class="col-md-6 right_column">
-						<input type="text" placeholder="Введіть площу">
-						<input type="text" placeholder="Введіть висоту">
-						<select name="house">
-							<option value=""></option>
-							<option value="Добре утеплений">Добре утеплений</option>
-							<option value=""></option>
-						</select><br>
-						<input type="text" placeholder="Введіть температуру">
-						<input type="text" placeholder="Введіть кількість днів">
+					<label style="display:none">
+						Минимально необходимая мощность котла, кВт
+					</label>
+					<div class="row">
+						<div id="heatcalc_rPw">
+						<label>
+							Рекомендованый котел СТС, кВт
+						</label>
+							<input type="text" id="pow" name="pow" value="8.21" style="display:none">
+							<input type="text" id="rPow" name="rPow" value="15" readonly >
+						</div>
 					</div>
-				</div>
+				</div><!-- 
 				<div class="col-md-6 recomended_product">
-					<hr>
-					<div class="col-md-6 left_part">
+					<hr> --><!-- 
+					<div class="col-md-6 left_part" id="heatcalc_rPw"> --><!-- 
 						<span class="recomend">Рекомендованый котел:</span>
 						<a href="#" class="prod_link">СТС-25</a>
 						<span class="recomend_price">Ціна:<b>29 000 грн</b></span>
@@ -173,12 +193,187 @@
 							Детальніше
 						</button>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<hr>
 		</div>
 	</main>
-
+	<div id="heatcalc_house_param_t" class="clearfix">
+		<table class="tabstyle1" width="100%" style="display:none">
+			<tbody>
+				<tr>
+					<th rowspan="2">Вид топлива</th>
+					<th colspan="2" align="center" valign="middle">
+						<div align="center">Необходимый объем топлива</div>
+					</th>
+					<th colspan="2" align="center" valign="middle">
+						<div align="center">Стоимость топлива</div>
+					</th>
+					<th rowspan="2" align="center" valign="middle">
+						<div align="center">Затраты на отопление в сезон (180 дней)</div>
+					</th>
+				</tr>
+				<tr>
+					<th align="center" valign="middle">
+						<div align="center">Количество</div>
+					</th>
+					<th align="center" valign="middle">
+						<div align="center">Ед. изм.</div>
+					</th>
+					<th align="center" valign="middle">
+						<div align="center">Сумма</div>
+					</th>
+					<th align="center" valign="middle">
+						<div align="center">Ед. изм.</div>
+					</th>
+				</tr>
+				<tr>
+					<td>Дрова дубовые</td>
+					<td align="center">
+						<div align="center">
+							<input id="dr_ob" name="dr_ob" value="11.12" readonly type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">м<sup>3</sup></div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="dr_price" name="dr_price" value="500" oninput="raschet_kotla()" type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">грн/м<sup>3</sup></div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="dr_itogo" name="dr_itogo" value="3892.00" readonly type="text">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Брикеты</td>
+					<td align="center">
+						<div align="center">
+							<input id="brick_ob" name="brick_ob" value="3.00" readonly type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">т</div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="brick_price" name="brick_price" value="2200" oninput="raschet_kotla()" type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">грн/тонна</div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="brick_itogo" name="brick_itogo" value="5727.50" readonly type="text">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Газ (населення)</td>
+					<td align="center">
+						<div align="center">
+							<input id="gaz_n_ob" name="gaz_n_ob" value="1977.01" readonly type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">м<sup>3</sup></div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="gaz_n_price" name="gaz_n_price" value="7.18" oninput="raschet_kotla()" type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">грн/м<sup>3</sup></div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="gaz_n_itogo" name="gaz_n_itogo" value="5318.16" readonly type="text">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Газ (юр.лица)</td>
+					<td align="center">
+						<div align="center">
+							<input id="gaz_u_ob" name="gaz_u_ob" value="1977.01" readonly type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">м<sup>3</sup></div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="gaz_u_price" name="gaz_u_price" value="9.0" oninput="raschet_kotla()" type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">грн/м<sup>3</sup></div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="gaz_u_itogo" name="gaz_u_itogo" value="9885.05" readonly type="text">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Эл. энергия (населення)</td>
+					<td align="center">
+						<div align="center">
+							<input id="el_n_ob" name="el_n_ob" value="14234.47" readonly type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">кВт×ч</div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="el_n_price" name="el_n_price" value="0.5" oninput="raschet_kotla()" type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">грн/кВт×ч</div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="el_n_itogo" name="el_n_itogo" value="11387.58" readonly type="text">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Ел. енергія (юр.лица)</td>
+					<td align="center">
+						<div align="center">
+							<input id="el_u_ob" name="el_u_ob" value="14234.47" readonly type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">кВт×ч</div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="el_u_price" name="el_u_price" value="1.5" oninput="raschet_kotla()" type="text">
+						</div>
+					</td>
+					<td align="center">
+						<div align="center">грн/кВт×ч</div>
+					</td>
+					<td align="center">
+						<div align="center">
+							<input id="el_u_itogo" name="el_u_itogo" value="17081.36" readonly type="text">
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 	<section>
 		<div class="container costs">
 			<div class="row">

@@ -826,10 +826,10 @@ footer .social p{
 	padding-right: 30px;
 }
 .calc_data label:first-child, .calc_data input:first-child{
-	margin-top: 58px;
+	margin-top: 30px;
+	margin-left: 30px;
 }
 .calc_data input, select{
-	float: right;
 	border-style: solid;
 	border-width: 1px;
 	border-color: #d0d0d3;
@@ -849,7 +849,7 @@ footer .social p{
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
 	color: #000;
-	padding-bottom: 50px;
+	width: 370px;
 }
 .calc_data label>sup{
 	color: red;
@@ -1520,6 +1520,15 @@ footer .social p{
 	}
 	.slicknav_menu{
 		margin-top: 10px;
+	}
+	.calc_data input, select{
+		margin-left: 30px;
+	}
+	.calc_data label{
+		width: 300px;
+	}
+	.calc.contact_title{
+		margin-bottom: 50px;
 	}
 }
 /* MEDIA QUERIES */
