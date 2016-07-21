@@ -33,6 +33,16 @@
 	<script src="../js/jquery-1.8.3.min.js"></script>
 	<script src="../js/responsiveslides.min.js"></script>
 	<script src="../js/script.js"></script>
+	<script>
+$(function() {//слайдер на главной странице
+	$(".rslides").responsiveSlides({
+		auto:false,
+		navContainer:"",
+		nav:true
+	}
+	);
+});
+</script>
 </head>
 <body>
 	<!-- HEADER -->
@@ -61,8 +71,8 @@
 						<li role="presentation"><a href="articles.html">
 							Корисна інформація
 						</a></li>
-						<li role="presentation"><a href="">
-							Монтаж та доставка
+						<li role="presentation"><a href="delivery.html">
+							Оплата і доставка
 						</a></li>
 						<li role="presentation"><a href="#">
 							Форум
@@ -306,5 +316,6 @@
 						</footer>
 
 						<!-- FOOTER -->
+
 					</body>
 					</html>

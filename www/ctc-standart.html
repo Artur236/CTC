@@ -37,6 +37,7 @@
 	<script src="../js/script.js"></script>
 	<script src="../js/ninja-slider.js"></script>
 	<script src="../js/thumbnail-slider.js"></script>
+	<script src="../js/smooth-scroll.min.js"></script>
 </head>
 <body>
 	<!-- HEADER -->
@@ -66,8 +67,8 @@
 						<li role="presentation"><a href="articles.html">
 							Корисна інформація
 						</a></li>
-						<li role="presentation"><a href="">
-							Монтаж та доставка
+						<li role="presentation"><a href="delivery.html">
+							Оплата і доставка
 						</a></li>
 						<li role="presentation"><a href="#">
 							Форум
@@ -235,11 +236,16 @@
 						Менеджер відповість
 						на будь-які Ваші запитання:
 					</p>
-					<button class="btn btn-primary manager_call">
-						Зв’язатись з менеджером
-					</button>
+					<a data-scroll href="#call">
+						<button class="btn btn-primary manager_call">
+							Зв’язатись з менеджером
+						</button>
+					</a>
 				</div>
 			</div>
+			<script>
+				smoothScroll.init();
+			</script>
 			<div class="row">
 				<h3>
 					Характеристики моделей
@@ -525,7 +531,7 @@
 		<div class="top_footer">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 loc">
+					<div class="col-md-8 loc" id="call">
 						<a href="index.html" class="logo">
 							<img src="../images/logo.png" alt="">
 						</a>

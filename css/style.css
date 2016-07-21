@@ -31,6 +31,9 @@ p{
 	position: relative;
 	display: inline-block;
 }
+.logo a:hover{
+	text-decoration: none;
+}
 .nav_bar{
 	margin-top: 35px;
 }
@@ -407,6 +410,9 @@ p{
 	margin-bottom: 100px;
 	position: relative;
 }
+.rslides2_nav{
+	display: none;
+}
 .product_container{
 	margin-right: 15px;
 	width: 262px;
@@ -499,6 +505,9 @@ p{
 .rslides1_nav:hover{
 	background: transparent url('../images/btn_next_hover.png') no-repeat left top;
 	transform: rotate(180deg);
+}
+.mobile_slide.rslides{
+	display: none;
 }
 /* Products */
 
@@ -998,6 +1007,9 @@ footer .social p{
 .news{
 	margin-bottom: 40px;
 }
+.news.articles_sidebar, .articles_sidebar{
+	border-left: 1px solid #ccc;
+}
 .news a.article_title{
 	font-size: 24px;
 	color: #3b5075;
@@ -1047,7 +1059,15 @@ footer .social p{
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
 	position: relative;
-	margin-bottom: 100px;
+}
+.pagination>li>a, .pagination>li>span{
+	border: 1px solid transparent;
+	color: #363636;
+}
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover{
+	background-color: transparent;
+	border: 1px solid #fea822;
+	color: #fea822;
 }
 .show_more .btn-primary:hover{
 	background-color: #feb14c;
@@ -1089,8 +1109,9 @@ footer .social p{
 	padding: 35px 0px 35px 0px;
 }
 .article_description ul{
-	margin-top: 50px;
-	margin-bottom: 20px;
+	color: #363636;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
 }
 .social_product span{
 	font-size: 14px;
@@ -1141,8 +1162,8 @@ footer .social p{
 	color: #3b5c76;
 	text-decoration: none;
 }
-.social_product{
-	margin-bottom: 70px;
+#disqus_thread{
+	margin-bottom: 55px;
 }
 /* ARTICLE SIMPLE PAGE */
 
@@ -1222,7 +1243,7 @@ footer .social p{
 }
 /* PRODUCT SIMPLE PAGE */
 /* MEDIA QUERIES */
-@media screen and (min-width:1024px) and (max-width:1199px) {
+@media screen and (min-width:1024px) and (max-width:1200px) {
 	.costs span{
 		height: 44px;
 	}
@@ -1400,6 +1421,12 @@ footer .social p{
 	.slicknav_menu{
 		margin-top: 10px;
 	}
+	.about img{
+		margin-top: 20px;
+	}
+	.costs .col-md-2{
+		margin-bottom: 0px;
+	}
 }
 @media screen and (min-width:320px) and (max-width:639px) {
 	.banner_text h1{
@@ -1413,7 +1440,6 @@ footer .social p{
 		position: fixed;
 		right: 0;
 		margin-top: 30px;
-		background: rgba(0, 0, 0, 0.3);
 		z-index: 1040;
 	}
 	.slicknav_menu .slicknav_menutxt{
@@ -1426,7 +1452,7 @@ footer .social p{
 		display: none;
 	}
 	.about p{
-		margin-bottom: 20px;
+		margin-bottom: 0;
 	}
 	.advantages_bg{
 		background-size: 100% 100%;
@@ -1463,18 +1489,23 @@ footer .social p{
 		top: -30px;
 		right: 0;
 		left: 90px;
+		display: none;
 	}
 	.rslides1_nav.next{
 		right: 85px;
+		display: none;
 	}
 	.products p{
-		margin-bottom: 80px;
+		margin-bottom: 30px;
 	}
 	.product_container{
-		margin-left: -10px;
-		margin-right: 0px;
+		margin: 0 auto;
 		padding-left: 0px;
-		margin-bottom: 25px;
+		width: 200px;
+		height: 525px;
+	}
+	.product_container img{
+		width: 200px;
 	}
 	.news img{
 		width: 100%;
@@ -1489,7 +1520,7 @@ footer .social p{
 		display: none;
 	}
 	.articles_sidebar{
-		margin-bottom: 50px;
+		display: none;
 	}
 	.social_product{
 		margin-bottom: 200px;
@@ -1529,6 +1560,84 @@ footer .social p{
 	}
 	.calc.contact_title{
 		margin-bottom: 50px;
+	}
+	.about img{
+		margin-top: 50px;
+	}
+	.col-md-3.about:last-child{
+		margin-bottom: 30px;
+	}
+	.costs .col-md-2{
+		margin-bottom: 30px;
+	}
+	.slider a:hover{
+		text-decoration: none;
+	}
+	.social_product span{
+		display: block;
+		padding-bottom: 13px;
+	}
+	.social_product a{
+		display: none;
+	}
+	.social_product .btn-primary{
+		margin-right: -23px;
+	}
+	.info{
+		padding-left: 25px;
+	}
+	.link, .info .phone{
+		display: block;
+	}
+	.desktop_slide.rslides{
+		display: none;
+	}
+	.mobile_slide .rslides li{
+		display: list-item;
+	}
+	.rslides2_nav {
+		position: absolute;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+		top: 50%;
+		left: 3px;
+		z-index: 0;
+		text-indent: -9999px;
+		overflow: hidden;
+		text-decoration: none;
+		height: 71px;
+		width: 71px;
+		background: transparent url("../images/btn_prev.png") no-repeat left top;
+		margin-top: -45px;
+		display: block;
+	}
+	.rslides2_nav.next{
+		left: auto;
+		background-position: right top;
+		right: 3px;
+		background: transparent url('../images/btn_prev.png') no-repeat left;
+		transform: rotate(180deg);
+	} 
+	.rslides .product_desc{
+		margin-bottom: 40px;
+	}
+	.product_description .square{
+		margin-bottom: 20px;
+	}
+	.rslides{
+		width: 278px;
+		margin: 0 auto;
+	}
+	.products h3{
+		margin-top: 40px;
+	}
+	.prod a:hover{
+		text-decoration: none;
+	}
+	.mobile_slide.rslides{
+		display: block;
+	}
+	.prod{
+		display: flex;
 	}
 }
 /* MEDIA QUERIES */
