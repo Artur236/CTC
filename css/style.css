@@ -11,7 +11,20 @@ p{
 	font-size: 14px;
 	color: #363636;
 }
-
+/* html {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+body {
+    overflow-x: hidden;
+    margin: 0px;
+    position: relative;
+    min-height: 100%;
+    height: auto;
+} */
 
 /* Header */
 .header{
@@ -674,6 +687,12 @@ footer .social p{
 .info .cell_2{
 	padding-right: 60px;
 }
+.info .cell_2::before{
+	content: url('../images/cell_2.png');
+	position: absolute;
+	top: -2px;
+	left: -30px;
+}
 .info .cell_3::before{
 	content: url('../images/cell_3.png');
 	position: absolute;
@@ -699,18 +718,18 @@ footer .social p{
 
 
 /* CONTACTS PAGE */
-.feedback h3{
+.feedback h3, .del_desc h3{
 	font-size: 24px;
 	font-weight: normal;
 }
-.feedback label{
+.feedback label, .delivery label{
 	font-size: 14px;
 	margin-bottom: 20px;
 }
-.feedback label>sup{
+.feedback label>sup, .delivery label>sup{
 	color: red;
 }
-.feedback input {
+.feedback input, .delivery input {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #d9d9d9;
@@ -722,7 +741,7 @@ footer .social p{
 	text-indent: 20px;
 	margin-bottom: 30px;
 }
-.feedback input:focus, .message textarea:focus{
+.feedback input:focus, .message textarea:focus, .delivery input:focus{
 	outline: none;
 	border-color: #f59805;
 }
@@ -806,6 +825,12 @@ footer .social p{
 }
 .contacts_sidebar .cell_1::before{
 	content: url('../images/cell_1.png');
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.contacts_sidebar .cell_2::before{
+	content: url('../images/cell_2.png');
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1209,6 +1234,9 @@ footer .social p{
 #thumbnail-slider:hover {transform:scale(1); opacity:1;} 
 #thumbnail-slider ul li.active { border-color:white;} 
 #thumbnail-slider .thumb { background-size:contain; }
+.table{
+	overflow: scroll;
+}
 #table tr>td{
 	padding: 20px;
 	font-size: 14px;
@@ -1242,6 +1270,36 @@ footer .social p{
 	border-bottom: 1px solid #ccc;
 }
 /* PRODUCT SIMPLE PAGE */
+
+/* DELIVERY PAGE */
+.delivery{
+	padding: 40px;
+	background-color: #f4f5f8;
+	margin-bottom: 155px;
+}
+.delivery label{
+	width: 180px;
+}
+.delivery_cost{
+	padding: 40px 200px;
+	border: 1px solid #ccc;
+	margin-top: 100px;
+}
+.delivery_cost span:first-child{
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+.delivery_cost span:last-child{
+	font-size: 24px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	color: #57cd7b;
+}
+#del_btn{
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+/* DELIVERY PAGE */
 /* MEDIA QUERIES */
 @media screen and (min-width:1024px) and (max-width:1200px) {
 	.costs span{
@@ -1322,6 +1380,13 @@ footer .social p{
 	}
 	.product_call{
 		margin-top: -174px;
+	}
+	.delivery_cost{
+		padding: 40px 100px;
+		margin-top: 179px;
+	}
+	.delivery label{
+		width: 300px;
 	}
 }
 @media screen and (min-width:640px) and (max-width:959px) {
@@ -1427,6 +1492,18 @@ footer .social p{
 	.costs .col-md-2{
 		margin-bottom: 0px;
 	}
+	.del_cover{
+		display: none;
+	}
+	.delivery{
+		margin-bottom: 20px;
+	}
+	.delivery_cost{
+		margin-top: 0px;
+	}
+	#del_btn{
+		margin-bottom: 40px;
+	}
 }
 @media screen and (min-width:320px) and (max-width:639px) {
 	.banner_text h1{
@@ -1482,6 +1559,9 @@ footer .social p{
 	.info .email::before, .info .skype::before, .info .cell_1::before, .info .cell_3::before{
 		left: -10px;
 	}
+	.info .cell_2::before{
+		left: -10px;
+	}
 	.design address{
 		float: left;
 	}
@@ -1505,13 +1585,13 @@ footer .social p{
 		height: 525px;
 	}
 	.product_container img{
-		width: 200px;
+		width: 198px;
 	}
 	.news img{
 		width: 100%;
 	}
 	.description_text{
-		margin-bottom: 200px;
+		margin-bottom: 150px;
 	}
 	.feedback{
 		border-right: none;
@@ -1545,9 +1625,6 @@ footer .social p{
 	}
 	.articles.contact_title, .contact.contact_title{
 		margin-bottom: 0px;
-	}
-	.news.social_product{
-		margin-bottom: 50px;
 	}
 	.slicknav_menu{
 		margin-top: 10px;
@@ -1638,6 +1715,26 @@ footer .social p{
 	}
 	.prod{
 		display: flex;
+		overflow: auto;
+	}
+	.delivery select{
+		margin-left: 0px;
+	}
+	.delivery{
+		margin-bottom: 20px;
+	}
+	.del_cover{
+		display: none;
+	}
+	.delivery_cost{
+		margin-top: 0px;
+		padding: 20px;
+	}
+	#del_btn{
+		margin-bottom: 40px;
+	}
+	.news{
+		margin-bottom: 25px;
 	}
 }
 /* MEDIA QUERIES */
