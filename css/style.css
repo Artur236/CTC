@@ -1389,7 +1389,7 @@ footer .social p{
 		width: 300px;
 	}
 }
-@media screen and (min-width:640px) and (max-width:959px) {
+@media screen and (min-width:671px) and (max-width:959px) {
 	.advantages_bg{
 		background-size: 100% 100%;
 	}
@@ -1505,7 +1505,7 @@ footer .social p{
 		margin-bottom: 40px;
 	}
 }
-@media screen and (min-width:320px) and (max-width:639px) {
+@media screen and (min-width:319px) and (max-width:670px) {
 	.banner_text h1{
 		font-size: 35px;
 	}
@@ -1663,6 +1663,9 @@ footer .social p{
 	.info{
 		padding-left: 25px;
 	}
+	.info address{
+		display: block;
+	}
 	.link, .info .phone{
 		display: block;
 	}
@@ -1735,6 +1738,9 @@ footer .social p{
 	}
 	.news{
 		margin-bottom: 25px;
+	}
+	.list_3 ol>li:last-child{
+		margin-bottom: 40px;
 	}
 }
 /* MEDIA QUERIES */
